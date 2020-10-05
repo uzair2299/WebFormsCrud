@@ -4,7 +4,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <div class="container-fluids" style="margin-top:100px">
     <div class="row d-flex justify-content-center">
-        <div class="col-6 px-sm-5">
+        <div class="col-5">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title text-center">
