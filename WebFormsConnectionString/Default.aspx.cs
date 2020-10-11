@@ -7,6 +7,7 @@ using System.Security.Policy;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebFormsConnectionString.Models;
 using WebFormsConnectionString.MySessionUtility;
 
 namespace WebFormsConnectionString
@@ -20,30 +21,19 @@ namespace WebFormsConnectionString
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            //string UserName = txtUserName.Text;
-            //string Passward = txtPassword.Text;
-            //string ConnectionString = ConfigurationManager.ConnectionStrings["Connection"].ToString();
-            //SqlConnection sqlConnection = new SqlConnection(ConnectionString);
-            //sqlConnection.Open();
-            //string Query = "select User_id,Password from User_login where User_id = '" + UserName + "' AND Password = '" + Passward + "'";
-            //SqlCommand sqlCommand = new SqlCommand(Query, sqlConnection);
-            //SqlDataReader dataReader = sqlCommand.ExecuteReader();
-            //if (dataReader.HasRows)
-            //{
-            //    while (dataReader.Read())
-            //    {
-            //        if(Convert.ToString(dataReader["Password"])==Passward && Convert.ToString(dataReader["User_id"]) ==UserName)
-            //        {
-            //            MySession.Current.User_Id = UserName;
-            //            Response.Redirect("Home.aspx", true);
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            //    //unsuccessfull
-            //}
-
+            User user = new User();
+            user.FirstName = txtFirstName.Text;
+            user.LastName = txtLastName.Text;
+            user.Password = txtPassword.Text;
+            if (rdbMale.Checked)
+            {
+                user.Gender = rdbMale.Text;
+            }
+            if (rdbFemale.Checked)
+            {
+                user.Gender = rdbFemale.Text;
+            }
+            user.Country = country.Items[country.SelectedIndex].Text;
         }
     }
 }

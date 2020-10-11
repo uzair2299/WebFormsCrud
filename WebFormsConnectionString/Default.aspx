@@ -46,19 +46,19 @@
                     <div class="row mt-2">
                         <div class="col-sm-12">
                             Select Gender : 
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadioInline1">Male </label>
+                      <%--      <div class="custom-control custom-radio custom-control-inline"> 
+                                <asp:RadioButton ID="RadioButton3" runat="server"  Text="Male" GroupName="rdbGender" TextAlign="Left" CssClass="custom-control-input"/>                                <label class="custom-control-label" for="rdbMale">Male </label>
                             </div>
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadioInline2">Female</label>
-                            </div>
-                        </div>
+                               <asp:RadioButton ID="RadioButton4" runat="server" Text="Female" GroupName="rdbGender" TextAlign="Left"/>
+                            </div>--%>
+                            <asp:RadioButton ID="rdbMale" runat="server"  Text="Male" GroupName="rdbGender" TextAlign="Left"/>
+                            <asp:RadioButton ID="rdbFemale" runat="server" Text="Female" GroupName="rdbGender" TextAlign="Left"/>
+                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col-sm-12">
-                            <select name="country" id="country" class="form-control">
+                            <select name="country" id="country" class="form-control" runat="server">
                                 <option>-- Select Country --</option>
                                 <option>India</option>
                                 <option>USA</option>
@@ -67,7 +67,8 @@
                     </div>
                     <div class="row mt-3">
                         <div class="col">
-                            <input type="submit" class="btn btn-primary btn-block">
+<%--                            <input type="submit" class="btn btn-primary btn-block" runat="server" onclick="btnLogin_Click">--%>
+                            <asp:Button  runat="server" OnClick="btnLogin_Click"  Text="Register" ID="btnRegister" CssClass="btn btn-block btn-dark"/>
                         </div>
                     </div>
                 </div>
