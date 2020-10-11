@@ -1,7 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebFormsConnectionString.Login" %>
-
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
@@ -18,9 +16,10 @@
     <link href="Content/font-awesome.css" rel="stylesheet" />
 </head>
 <body>
+
     <div class="container h-100">
         <div class="row h-100 justify-content-center align-items-center">
-            <form class="col-6" id="Login" runat="server">
+            <form class="col-sm-8 col-md-6 col-lg-6" id="Login" runat="server">
                 <div class="text-center mb-4">
                     <h3>Login</h3>
                 </div>
