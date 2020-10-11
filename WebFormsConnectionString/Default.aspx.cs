@@ -20,29 +20,29 @@ namespace WebFormsConnectionString
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            string UserName = txtUserName.Text;
-            string Passward = txtPassword.Text;
-            string ConnectionString = ConfigurationManager.ConnectionStrings["Connection"].ToString();
-            SqlConnection sqlConnection = new SqlConnection(ConnectionString);
-            sqlConnection.Open();
-            string Query = "select User_id,Password from User_login where User_id = '" + UserName + "' AND Password = '" + Passward + "'";
-            SqlCommand sqlCommand = new SqlCommand(Query, sqlConnection);
-            SqlDataReader dataReader = sqlCommand.ExecuteReader();
-            if (dataReader.HasRows)
-            {
-                while (dataReader.Read())
-                {
-                    if(Convert.ToString(dataReader["Password"])==Passward && Convert.ToString(dataReader["User_id"]) ==UserName)
-                    {
-                        MySession.Current.User_Id = UserName;
-                        Response.Redirect("Home.aspx", true);
-                    }
-                }
-            }
-            else
-            {
-                //unsuccessfull
-            }
+            //string UserName = txtUserName.Text;
+            //string Passward = txtPassword.Text;
+            //string ConnectionString = ConfigurationManager.ConnectionStrings["Connection"].ToString();
+            //SqlConnection sqlConnection = new SqlConnection(ConnectionString);
+            //sqlConnection.Open();
+            //string Query = "select User_id,Password from User_login where User_id = '" + UserName + "' AND Password = '" + Passward + "'";
+            //SqlCommand sqlCommand = new SqlCommand(Query, sqlConnection);
+            //SqlDataReader dataReader = sqlCommand.ExecuteReader();
+            //if (dataReader.HasRows)
+            //{
+            //    while (dataReader.Read())
+            //    {
+            //        if(Convert.ToString(dataReader["Password"])==Passward && Convert.ToString(dataReader["User_id"]) ==UserName)
+            //        {
+            //            MySession.Current.User_Id = UserName;
+            //            Response.Redirect("Home.aspx", true);
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    //unsuccessfull
+            //}
 
         }
     }

@@ -2,41 +2,76 @@
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<div class="container" style="margin-top:100px">
-    <div class="row d-flex justify-content-center">
-        <div class="col-sm-12 col-md-8 col-lg-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title text-center">
-                            Login
-                    </h5>
-                    <div class="form-group">
-                            <div class="input-group">
-                         <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <i class="fa fa-at"></i>
-                            </div>  
-                         </div>
-                         <asp:TextBox ID="txtUserName" runat="server" CssClass="form-control" placeholder="Enter Your Email" TextMode="Email"></asp:TextBox>
-                     </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="form-header">
+                    <h3>Register</h3>
+                </div>
+                <div class="form-container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="txtFirstName">First Name : </label>
+                            <asp:TextBox Text="" runat="server" ID="txtFirstName" CssClass="form-control"></asp:TextBox>
                         </div>
-                    <div class="form-group">
-                         
-                         <div class="input-group">
-                         <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <i class="fa fa-key"></i>
-                            </div>  
-                         </div>
-                         <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Enter Your Password" TextMode="Password"></asp:TextBox>
-                     </div>
-
+                        <div class="col-sm-6">
+                            <label for="txtLastName">Last Name : </label>
+                            <asp:TextBox Text="" runat="server" ID="txtLastName" CssClass="form-control"></asp:TextBox>
+                        </div>
                     </div>
-                   <asp:button  runat="server" ID="btnLogin" Text="Login"  CssClass="btn btn-block btn-primary" OnClick="btnLogin_Click"></asp:button>
+                    <div class="row mt-2">
+                        <div class="col-sm-12">
+
+                            <label for="txtEmail">Email : </label>
+                            <asp:TextBox Text="" runat="server" ID="txtEmail" CssClass="form-control"></asp:TextBox>
+
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-12">
+                            <label for="txtPhone">Phone : </label>
+                            <asp:TextBox Text="" runat="server" ID="txtPhone" CssClass="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                            <label for="txtFirstName">Password : </label>
+                            <asp:TextBox Text="" runat="server" ID="txtPassword" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="txtLastName">Confirm Password : </label>
+                            <asp:TextBox Text="" runat="server" ID="txtConfirmPassword" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-12">
+                            Select Gender : 
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline1">Male </label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline2">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-12">
+                            <select name="country" id="country" class="form-control">
+                                <option>-- Select Country --</option>
+                                <option>India</option>
+                                <option>USA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <input type="submit" class="btn btn-primary btn-block">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div> 
-   </div>
+    </div>
 </asp:Content>
- 
