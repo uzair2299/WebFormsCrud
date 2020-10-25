@@ -1,0 +1,9 @@
+﻿Step for Data Reader Ado.Net
+1: Connection String get from web.config by using (ConfigurationManager) Class
+2:Need SqlConnection Object
+3:Need SqlCommand Object + Sql query
+4:Need to Open the Sql Connection
+5:Need to ExecuteReader() to get the DataReader Object for Select operation because Select Operation Returns the data.
+  for other operation use ExecuteNonQuery() such as insert Update Delete
+  for specfic  return value or single value use  ExecuteScaler() 
+6:Close the Connection
